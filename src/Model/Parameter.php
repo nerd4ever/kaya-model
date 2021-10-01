@@ -1,7 +1,7 @@
 <?php
 
 
-namespace src\Nerd4ever\KayaModel\Model;
+namespace Nerd4ever\KayaModel\Model;
 
 
 class Parameter
