@@ -3,8 +3,9 @@
 
 namespace Nerd4ever\KayaModel\Model;
 
+use JsonSerializable;
 
-class Parameter
+class Parameter implements JsonSerializable
 {
     /**
      * @var string
@@ -51,10 +52,18 @@ class Parameter
         return $this;
     }
 
-    public static function create(string $field, ?string $value)
+    public static function create(string $field, ?string $value): Parameter
     {
         return (new Parameter())
             ->setField($field)
             ->setValue($value);
+    }
+
+    public function jsonSerialize(): array
+    {
+        return [
+            'field' => $this->getField(),
+            'value' => $this->getValue()
+        ];
     }
 }

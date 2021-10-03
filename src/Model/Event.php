@@ -3,8 +3,9 @@
 
 namespace Nerd4ever\KayaModel\Model;
 
+use JsonSerializable;
 
-class Event
+class Event implements JsonSerializable
 {
     /**
      * @var string
@@ -103,4 +104,12 @@ class Event
         return $this;
     }
 
+    public function jsonSerialize(): array
+    {
+        return [
+            'name' => $this->getName(),
+            'identifier' => $this->getIdentifier(),
+            'parameters' => $this->getParameters()
+        ];
+    }
 }
