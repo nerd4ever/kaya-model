@@ -1,0 +1,27 @@
+{
+    "name": "nerd4ever/kaya-model",
+    "type": "library",
+    "description": "Nerd4ever Library for Integration with Kaya Universal Platform",
+    "authors": [
+        {
+            "name": "Sileno de Oliveira Brito",
+            "email": "sobrito@nerd4ever.com.br",
+            "homepage": "https://www.nerd4ever.com.br",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "repo@nerd4ever.com.br"
+    },
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Nerd4ever\\KayaModel\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1.3",
+        "ext-json": "*"
+    }
+}
