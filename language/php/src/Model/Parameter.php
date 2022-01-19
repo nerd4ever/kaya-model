@@ -52,7 +52,7 @@ class Parameter implements JsonSerializable
         return $this;
     }
 
-    public static function create(string $field, ?string $value): Parameter
+    public static function setup(string $field, ?string $value): Parameter
     {
         return (new Parameter())
             ->setField($field)
